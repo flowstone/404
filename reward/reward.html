@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="reward.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="page-reward">
+    <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+    <div class="hide_box" style="display: none;"></div>
+    <div class="shang_box" style="display: none;">
+        <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+        <div class="shang_tit">
+            <p>谢谢打赏</p>
+        </div>
+        <div class="shang_payimg">
+            <a href="img/alipayimg.jpg" title="扫码支持" rel="fancy-group" class="fancy-ctn fancybox"><img src="img/alipayimg.jpg" title="扫码支持"></a>
+        </div>
+        <div class="pay_explain">扫码打赏，你说多少就多少</div>
+        <div class="shang_payselect">
+
+            <div class="pay_item checked" data-id="alipay">
+                <span class="radiobox"></span>
+                <span class="pay_logo"><a href="img/alipay.png" title="支付宝" rel="fancy-group" class="fancy-ctn fancybox"><img src="img/alipay.png" title="支付宝"></a></span>
+            </div>
+
+
+            <div class="pay_item" data-id="wechat">
+                <span class="radiobox"></span>
+                <span class="pay_logo"><a href="img/weixin.png" title="微信" rel="fancy-group" class="fancy-ctn fancybox"><img src="img/weixin.png" title="微信"></a></span>
+            </div>
+
+        </div>
+        <div class="shang_info">
+            <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".pay_item").click(function(){
+        $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+        var dataid=$(this).attr('data-id');
+        $(".shang_payimg img").attr("src","img/"+dataid+"img.jpg");
+        $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+    });
+    function dashangToggle(){
+        $(".hide_box").fadeToggle();
+        $(".shang_box").fadeToggle();
+    }
+</script>
+</body>
