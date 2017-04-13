@@ -7,4 +7,7 @@
 **打赏**
 >效果传送门 [打赏](http://xueyao.org/JS-Effects/reward/reward.html)
 
+**copyright**
+>效果传送门 [打赏](http://xueyao.org/JS-Effects/copyright/copyright.html)
+
 感谢@luuman大神

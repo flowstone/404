@@ -1,0 +1,40 @@
+.copyright {
+    width: 85%;
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 0.5em 1.8em;
+    border: 1px solid #2f2f2f;
+    font-size: 0.93em;
+    line-height: 1.6em;
+    word-break: break-word;
+    background: #414141;
+    -webkit-box-shadow: 4px 4px 18px rgba(0,0,0,0.46);
+    box-shadow: 4px 4px 18px rgba(0,0,0,0.46);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.copyright span {
+    margin-right: 1em;
+    color: #d5d5d5;
+    font-weight: bold;
+}
+.copyright a{
+    text-decoration:none;
+}
+.copyright a:hover {
+    font-weight: bold;
+    color: #fff;
+}
+.copyright:hover p .copy-path::after {
+    content: "复制";
+}
+.copyright .post-url:hover {
+    font-weight: normal;
+}
+.copyright .copy-path {
+    margin-left: 1em;
+}
+.copyright .copy-path:hover {
+    color: #808080;
+    cursor: pointer;
+}
